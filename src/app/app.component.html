@@ -1,0 +1,16 @@
+<ul class="sidenav">
+    <a class='btn btn-primary btnHome' [routerLink]="['/']">Home</a>
+    <li><a [routerLink]="['/dumb']">Link to another component</a></li>
+    <li><a [routerLink]="['/dashboard']">Dashboard</a></li>
+    <li><a [routerLink]="['/site-management']">Site Management</a></li>
+    <li><a [routerLink]="['/luminaire-types']">Luminaire Types</a></li>
+    <li><a [routerLink]="['/device-management']">Device Management</a></li>
+    <li><a [routerLink]="['/user-management']">User Management</a></li>
+    <li><a [routerLink]="['/settings']">Settings</a></li>
+</ul>
+
+<div class="content">
+    <h1>{{title}} - {{names.name$ | async}}</h1>    
+    <router-outlet></router-outlet>
+</div>
+
