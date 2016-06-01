@@ -1,6 +1,6 @@
-# Angular Seed Prototype
+# Angular Seed Prototype w/ routing
 
-Hello world sample built with Angular2, Webpack, ngrx/store and TypeScript.
+Sample app with Angular2 and support for Webpack, ngrx/store and TypeScript.
 
 # Getting Started
 ## Dependencies
