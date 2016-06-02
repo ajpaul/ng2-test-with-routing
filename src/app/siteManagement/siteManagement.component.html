@@ -1,0 +1,29 @@
+<h2>Welcome to the {{ title }}</h2>
+
+<form let myForm="ngForm">
+    <fieldset class='form-group row'>
+        <label for="addressLine1" class="col-sm-2 form-control-label">Address Line 1:</label>
+        <div class="col-sm-10">
+            <input type="text" id="addressLine1" ngControl="addressLine1" required
+                placeholder="123 Main Street" class="form-control">
+        </div>
+    </fieldset>
+    <fieldset class='form-group row'>
+        <label for="addressLine2" class="col-sm-2 form-control-label">Address Line 2:</label>
+        <div class="col-sm-10">
+            <input type="text" id="addressLine2" ngControl="addressLine2"
+                placeholder="Building 4" class="form-control">
+        </div>
+    </fieldset>
+    <fieldset class='form-group row'>
+        <label for="zipCode" class="col-sm-2 form-control-label">Zip Code:</label>
+        <div class="col-sm-10">
+            <input type="text" ngControl="zipCode" required placeholder="12345"
+                class="form-control">
+        </div>
+    </fieldset>
+    
+    <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Add Site</button>
+    </div>
+</form>

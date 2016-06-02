@@ -2,10 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'site-management',
-    template:
-    `
-    <h2>Welcome to the {{ title }}</h2>
-    `
+    templateUrl: '../src/app/siteManagement/siteManagement.component.html',
+    styleUrls: ['../src/app/siteManagement/siteManagement.component.css']
 })
 
 export class SiteManagementComponent {

@@ -36,7 +36,7 @@ import '../style/styles.less';
 ])
 
 export class AppComponent {
-    title: string = "App Component Title";
+    title: string = "IPS Admin";
 
     constructor(public names: Names) {
 
