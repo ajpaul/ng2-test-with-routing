@@ -1,15 +1,21 @@
-<ul class="sidenav">
-    <a class='btn btn-primary btnHome' [routerLink]="['/']">Home</a>
-    <li><a [routerLink]="['/dumb']">Link to another component</a></li>
-    <li><a [routerLink]="['/dashboard']">Dashboard</a></li>
-    <li><a [routerLink]="['/site-management']">Site Management</a></li>
-    <li><a [routerLink]="['/luminaire-types']">Luminaire Types</a></li>
-    <li><a [routerLink]="['/device-management']">Device Management</a></li>
-    <li><a [routerLink]="['/user-management']">User Management</a></li>
-    <li><a [routerLink]="['/settings']">Settings</a></li>
+<ul class="sidenav" [style.width.px] = "navWidth" >
+    <li><a (click) = 'sideNavClick()'>Close &times;</a></li>
+    <li><a (click) = 'sideNavClose()' [routerLink]="['/']">Home</a></li>
+    <li><a (click) = 'sideNavClose()' [routerLink]="['/dumb']">Danny's component</a></li>
+    <li><a (click) = 'sideNavClose()' [routerLink]="['/dashboard']">Dashboard</a></li>
+    <li><a (click) = 'sideNavClose()' [routerLink]="['/site-management']">Site Management</a></li>
+    <li><a (click) = 'sideNavClose()' [routerLink]="['/luminaire-types']">Luminaire Types</a></li>
+    <li><a (click) = 'sideNavClose()' [routerLink]="['/device-management']">Device Management</a></li>
+    <li><a (click) = 'secondaryRouting()' [routerLink]="['/user-management']">User Management</a></li>
+    <li><a (click) = 'sideNavClose()' [routerLink]="['/settings']">Settings</a></li>
 </ul>
 
-<div class="content">
+<header class='header paddingLeft20'>
+    <div (click) = 'sideNavClick()'>☰ Menu</div>
+    <h1> {{ headerTitle }} </h1>
+</header>
+
+<div class="content" [style.backgroundColor] = "backgroundColor">
     <h1>{{title}} - {{names.name$ | async}}</h1>    
     <router-outlet></router-outlet>
 </div>
