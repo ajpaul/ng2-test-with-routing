@@ -1,4 +1,5 @@
 <h2>Welcome to the {{ title }}</h2>
+<h4>For some reason this component doesn't fully load until you click a control...</h4>
 
 <form (submit)="addLumType($event)">
   <input [(ngModel)]="newLumType" (keyup.enter)="newLumType=''" type="text"
