@@ -1,0 +1,20 @@
+.secondarySidenav {
+    position: fixed;
+    z-index: 100;
+    left: 200;
+    top: 0;
+    height: 100%;
+    transition: 0.5s;
+    background-color: lightgray;
+    color: black;
+    width: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+/*needs the anchor and responsive styles from app.component.css*/

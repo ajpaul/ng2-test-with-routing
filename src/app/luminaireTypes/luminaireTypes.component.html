@@ -1,0 +1,25 @@
+<h2>Welcome to the {{ title }}</h2>
+
+<form (submit)="addLumType($event)">
+  <input [(ngModel)]="newLumType" (keyup.enter)="newLumType=''" type="text"
+    placeholder="Name"/>
+  <input type="number" placeholder="External Width"/>
+  <input type="number" placeholder="External Length"/>
+  <button  type="submit" [disabled]="newLumType===''">Add Luminaire Type</button>  
+</form>
+
+<!--Remaining todo : {{remaining}}  -->
+   <ul *ngFor="let lumType of luminaireTypes;let i=index"> <!--is this right? -->
+    <li>{{lumType.name}}
+      <button class="btn btn-secondary" (click)="deleteLumType(i)">Remove</button>
+    </li>
+  </ul>
+  
+  
+<!-- A two-way binding example -->
+  <div [hidden]="newLumType">
+          Type in a new luminaire type...
+  </div>
+  <div [hidden]="!newLumType">
+          Typing: {{ newLumType }}
+  </div>
