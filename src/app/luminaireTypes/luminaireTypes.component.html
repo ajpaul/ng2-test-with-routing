@@ -8,12 +8,11 @@
   <button  type="submit" [disabled]="newLumType===''">Add Luminaire Type</button>  
 </form>
 
-<!--Remaining todo : {{remaining}}  -->
-   <ul *ngFor="let lumType of luminaireTypes;let i=index"> <!--is this right? -->
-    <li>{{lumType.name}}
-      <button class="btn btn-secondary" (click)="deleteLumType(i)">Remove</button>
-    </li>
-  </ul>
+<ul *ngFor="let lumType of luminaireTypes;let i=index"> <!--is this right? -->
+  <li>{{lumType.name}}
+    <button class="btn btn-secondary" (click)="deleteLumType(i)">Remove</button>
+  </li>
+</ul>
   
   
 <!-- A two-way binding example -->

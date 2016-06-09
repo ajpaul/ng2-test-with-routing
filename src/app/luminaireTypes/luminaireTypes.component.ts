@@ -14,6 +14,9 @@ export class LuminaireTypesComponent {
     //why isn't the list being populated on first load?
         
     constructor() {
+        //something is wrong here
+        //it is waiting until you click in the dom to do some of this stuff
+        //h2 isn't added and list of luminaireTypes isn't showing on load
         console.log("Luminaire Types initialized (constructor)");
         this.luminaireTypes = [];
         let first = {name: "ESL 2x4", externalWidth: 2, externalLength: 2};

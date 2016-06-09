@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
 })
 
 export class CodebooksComponent{
-    title: string = 'Codebooks Component';
+    title: string = 'Codebooks subcomponent';
 }

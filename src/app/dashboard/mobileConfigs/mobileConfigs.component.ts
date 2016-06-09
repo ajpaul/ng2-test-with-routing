@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
 })
 
 export class MobileConfigsComponent{
-    title: string = 'Mobile Configs Component';
+    title: string = 'Mobile Configs subcomponent';
 }

@@ -20,8 +20,8 @@ import '../style/styles.less';
    selector: 'app',
    templateUrl :'../src/app/app.component.html',
    styleUrls: ['../src/app/app.component.css'],
-   providers: [Names, UserManagementComponent],
-   directives: [ROUTER_DIRECTIVES],
+   providers: [Names],
+   directives: [ROUTER_DIRECTIVES, UserManagementComponent],
    changeDetection: ChangeDetectionStrategy.OnPush
 })
 
@@ -41,11 +41,11 @@ export class AppComponent {
     title: string = "IPS Admin";
     headerTitle: string = "Header";
     navWidth: number = 0;
-    // secondaryNavWidth: number = 0;
-    // borderRight: string = "0px solid #000";
+    secondaryNavWidth: number = 0;
+    borderRight: string = "0px solid #000";
     backgroundColor: string = "rgba(0,0,0,0)";
 
-    constructor(public names: Names, private userManagement: UserManagementComponent) {
+    constructor(public names: Names) {
         
     }
     
@@ -54,9 +54,9 @@ export class AppComponent {
         
         var that = this;
         
-        if (this.userManagement.secondaryNavWidth > 0){
-            this.userManagement.secondaryNavWidth = 0;
-            this.userManagement.borderRight = "0px solid #000";
+        if (this.secondaryNavWidth > 0){
+            this.secondaryNavWidth = 0;
+            this.borderRight = "0px solid #000";
         } else
             this.navWidth = 0; 
         
@@ -92,9 +92,8 @@ export class AppComponent {
         //secondary nav width and border right should be moved to usermanagement
         
         //open the secondary nav
-        if(this.userManagement.secondaryNavWidth === 0){
-            this.userManagement.openSecondarySidenav();
-            
+        if(this.secondaryNavWidth === 0){
+            this.secondaryNavWidth = 200;
         }
         //close the secondary nav
         else

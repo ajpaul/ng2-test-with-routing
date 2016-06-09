@@ -10,6 +10,15 @@
     <li><a (click) = 'sideNavClose()' [routerLink]="['/settings']">Settings</a></li>
 </ul>
 
+
+<ul class="secondarySidenav" [style.width.px] = "secondaryNavWidth" [style.border-right] = "borderRight"> 
+    <li><a>Just makin sure</a></li>
+    <li><a>that I could</a></li>
+    <li><a>actually do this</a></li>
+    <li><a>in Typescript</a></li>
+    <li><a [routerLink]="['./valid']">Valid Subselection</a></li>
+</ul>
+
 <header class='header paddingLeft20'>
     <div (click) = 'sideNavClick()'>☰ Menu</div>
     <h1> {{ headerTitle }} </h1>
