@@ -12,7 +12,7 @@ import { DeviceManagementComponent } from './deviceManagement/deviceManagement.c
 import { UserManagementComponent } from './userManagement/userManagement.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ValidComponent } from './userManagement/valid.component';
-import { Names } from './name'
+import { Names } from './component1/name'
 
 import '../style/styles.less';
 

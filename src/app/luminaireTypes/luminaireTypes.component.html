@@ -1,11 +1,12 @@
 <h2>Welcome to the {{ title }}</h2>
 <h4>For some reason this component doesn't fully load until you click a control...</h4>
+<h5>Also, first letter typed doesn't show up? hmm...</h5>
 
 <form (submit)="addLumType($event)">
   <input [(ngModel)]="newLumType" (keyup.enter)="newLumType=''" type="text"
     placeholder="Name"/>
-  <input type="number" placeholder="External Width"/>
-  <input type="number" placeholder="External Length"/>
+  <input #externalWidth type="number" placeholder="External Width"/>
+  <input #externalLength type="number" placeholder="External Length"/>
   <button  type="submit" [disabled]="newLumType===''">Add Luminaire Type</button>  
 </form>
 
@@ -14,8 +15,7 @@
     <button class="btn btn-secondary" (click)="deleteLumType(i)">Remove</button>
   </li>
 </ul>
-  
-  
+    
 <!-- A two-way binding example -->
   <div [hidden]="newLumType">
           Type in a new luminaire type...
@@ -23,3 +23,5 @@
   <div [hidden]="!newLumType">
           Typing: {{ newLumType }}
   </div>
+
+  

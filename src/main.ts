@@ -5,14 +5,15 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { provideStore }	 	from '@ngrx/store';
 
 import { AppComponent } 	from './app/app.component';
-import { names } 			from './app/name';
+import { names } 			from './app/component1/name';
+import { luminaireTypes }   from './app/luminaireTypes/luminaireTypes.reducer';
 
 export function main(): Promise<any> {
 
 	return bootstrap(AppComponent, [
 		ROUTER_PROVIDERS,
 		provide(LocationStrategy, {useClass: HashLocationStrategy}),
-		provideStore({ names })
+		provideStore({ names, luminaireTypes })
 	])
 	.catch(err => console.error(err));
 

@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 
-import { Names } from '../name'
+import { Names } from './name'
 import { DumbComponent1 } from './dumb1.component';
 
 @Component({

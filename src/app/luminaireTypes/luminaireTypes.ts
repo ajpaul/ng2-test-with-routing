@@ -1,4 +1,5 @@
 export interface LuminaireTypes {
+    id: number;
     name: string;
     externalWidth: number;
     externalLength: number;
