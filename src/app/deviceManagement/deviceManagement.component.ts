@@ -20,6 +20,6 @@ export class DeviceManagementComponent implements OnInit {
     }
 
     doSomething(): void {
-        alert("something");
+        alert("something!");
     }
 }
